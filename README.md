@@ -1,24 +1,34 @@
-# Exploratory-Data-Analysis-EDA-Project
-<br>
+# 🏥 Stroke Prediction EDA Project
 
-## Day 2: Data Cleaning & Preprocessing
-**Date:** 2025-12-09
-**Status:** ✅ Completed
+### 1. Project Overview
+**Objective:** Perform a comprehensive Exploratory Data Analysis (EDA) on the Stroke Prediction dataset to identify key risk factors associated with stroke.
+**Context:** According to the WHO, stroke is a leading cause of death globally (approx. 11% of total deaths). This project analyzes patient demographics, health conditions (hypertension, heart disease), and lifestyle choices to uncover patterns that can aid in early detection.
 
-**Key Changes Made:**
-1. **Data Type Fixes:**
-   - Converted `SignUpDate`, `PurchaseDate`, and `LastLogin` to datetime objects.
-   - Converted `UserID` and `ProductID` to strings (categorical) to prevent accidental math operations.
+### 2. Dataset Information
+The dataset contains **5,110 observations** with **12 features**.
+* **Source:** [Kaggle - Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+* **Target Variable:** `stroke` (0 = No Stroke, 1 = Stroke)
+* **Key Features:** Age, BMI, Glucose Level, Smoking Status, Hypertension, Heart Disease.
 
-2. **Outlier Treatment:**
-   - **ReviewScore:** Identified as a 0-10 scale. Removed 3 rows with invalid negative scores.
-   - **TotalAmount:** Detected 723 statistical outliers using IQR, but **retained them** as they represent valid high-value transactions.
+---
 
-3. **Data Quality Checks:**
-   - **Missing Values:** Confirmed 0 missing values across the dataset.
-   - **Duplicates:** Confirmed 0 duplicate rows.
-   - **Categoricals:** Verified consistency in `Gender`, `Country`, and `ReferralSource`.
-
-**Outcome:**
-- **Final Dataset Shape:** (99,997 rows, 21 columns)
-- **Saved File:** `data/interim/cleaned_day2.csv`
+### 3. Repository Structure
+```text
+eda-project/
+│
+├── data/
+│   ├── raw/                  # Original dataset (healthcare-dataset-stroke-data.csv)
+│   ├── interim/              # Cleaned versions (created during Day 2)
+│   └── processed/            # Final datasets for modeling
+│
+├── notebooks/
+│   ├── 01_data_overview.ipynb              # Day 1: Profiling & Issues Log
+│   ├── 02_cleaning_preprocessing.ipynb     # Day 2: Cleaning & Imputation
+│   ├── 03_univariate_bivariate_eda.ipynb   # Day 3: Visualization
+│   └── 04_stats_time_features_final.ipynb  # Day 4: Stats & Final Insights
+│
+├── reports/
+│   └── figures/              # Exported PNG plots
+│
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
