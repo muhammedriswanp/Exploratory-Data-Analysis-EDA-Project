@@ -34,7 +34,6 @@ By the end of this project, the following objectives are met:
 * **Missing Values:** 201 missing BMI values.
 * **Data Quality:** 1 gender entry = "Other"; inconsistent work type labels.
 * **Hidden Missing:** Smoking status contains "Unknown" (30%).
-* **Imbalance:** Severe class imbalance (stroke cases ≈ 4.8%).
 
 ---
 
@@ -43,7 +42,6 @@ By the end of this project, the following objectives are met:
 **Tasks Completed**
 * **Fix Datatypes:** Removed irrelevant column `id`.
 * **Standardize:** Dropped rare gender value ("Other") & standardized labels.
-* **Optimization:** Converted selected columns to `category` dtype for memory efficiency.
 * **Imputation:** Filled missing `BMI` values using the median.
 * **Outliers:** Performed detection using IQR for `BMI` and `Glucose` (decided to retain outliers).
 * **Export:** Saved cleaned dataset to `data/interim/cleaned_day2.csv`.
