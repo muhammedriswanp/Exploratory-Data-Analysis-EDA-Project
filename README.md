@@ -19,8 +19,8 @@ This project performs a complete Exploratory Data Analysis (EDA) on a real-world
 ## Instructions to Run
 
 **1. Clone the repository**
-    ```bash
-    git clone <your-github-repo-url>
+    
+    git clone <https://github.com/muhammedriswanp/Exploratory-Data-Analysis-EDA-Project>
 
 ## 2. Install dependencies
 
@@ -58,35 +58,35 @@ data/processed/final_cleaned_day4.csv
 
 ## Segment Findings
 
-**Age Groups**
+**Age Groups:**
 Stroke risk increases sharply across age groups, with seniors showing the highest occurrence.
 
-**Smoking & Gender**
+**Smoking & Gender:**
 Former and current smokers exhibit higher stroke rates compared to never-smokers, especially among males.
 
-**Medical Conditions**
+**Medical Conditions:**
 Individuals with hypertension, heart disease, high glucose, or obesity show substantially higher stroke risk.
 
-**Occupational Health**
+**Occupational Health:**
 BMI and glucose levels vary across work types, suggesting occupational and lifestyle influences on health risk.
 
 ---
 
 ## Data Quality Issues
 
-**Missing Values**
+**Missing Values:**
 Missing BMI values were handled using median imputation.
 
-**Class Imbalance**
+**Class Imbalance:**
 Stroke cases are relatively rare, which may affect the stability of some statistical comparisons.
 
-**Inconsistencies**
+**Inconsistencies:**
 Categorical inconsistencies (e.g., work type labels, smoking status formatting) required standardization.
 
-**Rare Categories**
+**Rare Categories:**
 A single rare gender category was removed to avoid distortion in categorical analysis.
 
-**Time-Series Limitation**
+**Time-Series Limitation:**
 The dataset does not include a date/time column, so time-based EDA was not performed.
 
 ---
